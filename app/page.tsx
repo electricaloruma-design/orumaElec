@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { Suspense } from "react";
 import { connection } from "next/server";
 import { Zap, Wrench, House, Toolbox, HandFist, Headset, ShieldUser, LocationEdit, LocateIcon, Phone, MessageCircle } from "lucide-react"
+import Image from "next/image";
 
 async function CurrentYear(){
                   await connection();
@@ -49,9 +50,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex min-h-72 items-center justify-center rounded-3xl bg-neutral-100 p-8">
+          <div className="flex min-h-72 items-center justify-center rounded-3xl bg-neutral-100 ">
             <p className="text-center text-neutral-500">
-              Our hero image will go here.
+              <img 
+              className="h-full w-full rounded-2xl object-cover shadow-lg"
+              src="/images/hero.png" 
+              alt="" />
             </p>
           </div>
         </div>
